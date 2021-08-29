@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
       imageWidth: 120,
       title: 'Por favor espere...',
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
       onBeforeOpen: () => {
         Swal.showLoading()
       }

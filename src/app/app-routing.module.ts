@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'mascotas/login',
     component: LoginComponent
+  },
+  {
+    path: 'mascotas/sign',
+    component: MascotasFormComponent
   }
 ];
 
