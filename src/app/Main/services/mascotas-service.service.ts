@@ -9,16 +9,37 @@ import Swal from 'sweetalert2';
 })
 export class MascotasServiceService {
 
+  Base_URL = 'https://app-keneth.herokuapp.com/getAllpets';
   constructor ( private https: HttpClient) {}
 
-  getMascotas(): Observable<any> {
+  async getMascotas() {
     Swal.fire(
-      'Good job!',
-      'You clicked the button!',
-      'success'
+      {
+        title: 'Por favor espere',
+        text: 'Obteniendo Data...',
+        allowOutsideClick: false,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+        }
+      }
     )
-    return this.https.get('https://app-keneth.herokuapp.com/getAllpets');
-  }
+   const url = this.Base_URL;
+    let respuesta = [];
+    await this.https.get(url).toPromise()
+      .then(async (respuestaApi: any) => {
+        respuesta = respuestaApi
+        console.log('Lista de Mascotas ', respuesta)
+        Swal.close()
+      })
+      .catch(async (err: any) => {
+        Swal.close()
+        Swal.fire({
+          icon: 'error',
+          title: 'Servicio no disponible: ' + err
+        })
+      });
+      return respuesta
+      }
 
 
 

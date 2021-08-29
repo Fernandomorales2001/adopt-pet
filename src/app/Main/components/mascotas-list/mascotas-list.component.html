@@ -7,7 +7,7 @@
                 UNA MASCOTA!
             </p>
             <div class="imagen-home">
-                <img class="paw" src="https://pngimg.com/uploads/paw/paw_PNG72.png" alt="">
+                <img class="paw" src="https://pngimg.com/uploads/paw/paw_PNG72.png">
             </div>
         </div>
             <p style="margin-top: -100px;">
@@ -21,7 +21,7 @@
     <div class="col-md-4" style="margin-top: 20px;" *ngFor="let mas of listaMascotas">
         <div class="card text-center"></div>
         <div class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
-            {{mas.NombreMascota}}
+            {{mas.PetName | uppercase}}
             <button class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
             </button>
@@ -29,9 +29,12 @@
                 <i class="fa fa-paw" aria-hidden="true"></i>
             </button>
         </div>
+        <!-- <img [src]=mas.Images> -->
+        <img class="card-img-top" src="https://los40es00.epimg.net/los40/imagenes/2020/10/20/musica/1603221924_971405_1603223481_noticia_normal.jpg" alt="">
+        <hr>
         <div class="card-body">
-            <p>Edad: {{mas.edad}}</p>
-            <img [src]="'http://localhost:4200/ + mas.imagenes'" class="img-card-top">
+            <p>EDAD: {{mas.Age}}</p>
+            <p>DESCRIPCION: {{mas.Description | uppercase}}</p>
         </div>
     </div>
 

@@ -4,9 +4,9 @@ data-backdrop="static" aria-hidden="true">
   <div class="modal-content redondear">
     <div class="modal-header bg-primary text-white">
       <h4 id="dialog-sizes-name1" class="modal-title pull-left text-center"><img style="width: 50px;" src="assets/img/adoptado.svg" alt=""> ADOPTAR UNA MASCOTA</h4>
-      <button type="button" class="close pull-right" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" (click)="cerrar()" class="close pull-right" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
   </div>
     <div class="modal-body">
       <div class="row mt-4">
@@ -55,7 +55,7 @@ data-backdrop="static" aria-hidden="true">
     </div>
   </div>
   <div class="modal-footer">
-    <button class="btn btn-danger">CERRAR</button>
+    <button (click)="cerrar()"  class="btn btn-danger">CERRAR</button>
     <button class="btn btn-primary" >GUARDAR</button>
   </div>
     </div>

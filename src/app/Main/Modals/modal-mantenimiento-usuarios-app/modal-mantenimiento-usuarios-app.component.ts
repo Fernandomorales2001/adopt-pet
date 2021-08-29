@@ -17,11 +17,11 @@ export class ModalMantenimientoUsuariosAppComponent implements OnInit {
   ngOnInit(): void {
   }
 
- async abrirModal(){
+  abrirModal(){
         this.modalUsuario.show(); 
   }
 
-  cerrarModal(){
+  cerrar(){
     this.modalUsuario.hide();
   }
 

@@ -1,6 +1,7 @@
 export interface Mascotas {
+    PetName?: string,
     _id?: string,
-    NombreMascota?: string,
-    edad?: number,
-    imagenes?: string
+    Description?: string,
+    Age?: number,
+    Images?: string
 }

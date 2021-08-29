@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #E4AB10;">
+<nav class="navbar navbar-expand-lg" style="background-color: #E4AB10; padding: 23px;">
     <div class="container">
         <div class="container-fluid">
             <a style="color: #7B4723;" class="navbar-brand" routerLink="/"><i class="fas fa-paw"></i> ADOPT PET</a>
@@ -17,7 +17,7 @@
                     <a style="color: #7B4723;" class="nav-link" routerLink="/empleados/add" routerLinkActive="active"><i class="fas fa-hand-holding-usd"></i>DONACIONES</a>
                   </li>
                   <li class="nav-item">
-                    <button class="nav-link" title="INICIO DE SESION" routerLink="mascotas/login" style="background-color: #E8D3BA; border-radius: 10px;">INCIAR SESION</button>
+                    <button class="nav-link" title="INICIO DE SESION" (click)="iniciarSesion()" style="background-color: #E8D3BA; border-radius: 10px; color: #7B4723;"><strong>INCIAR SESION</strong></button>
                   </li>
               </ul>
             </div>

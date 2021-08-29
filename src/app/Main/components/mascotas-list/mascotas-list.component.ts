@@ -10,26 +10,31 @@ import { MascotasServiceService } from '../../services/mascotas-service.service'
 })
 export class MascotasListComponent implements OnInit {
   @ViewChild('controlUsuario', {static: false}) controlUsuario: ModalMantenimientoUsuariosAppComponent
-  mascotas: Mascotas[];
-  constructor(private mascotasServiceService: MascotasServiceService) {
+  constructor(private mascotasServiceService: MascotasServiceService,
+    ) {
    }
 
    @HostBinding('class') clases = 'row';
 
-   listaMascotas: Mascotas[] | undefined;
+   listaMascotas: any = [];
  
-  ngOnInit () {
- 
-   this.mascotasServiceService.getMascotas().subscribe(
-     data => {
-       this.listaMascotas = data;
-       console.log(this.listaMascotas);
-     }
-   )
+  async ngOnInit () {
+    await this.getMascotas()
   }
+
+
+
+async getMascotas(){
+  await this.mascotasServiceService.getMascotas().then( data =>
+     {
+       this.listaMascotas = data
+       console.log(this.listaMascotas);
+     });
+ }
 
   abrirModalUsuario(){
     this.controlUsuario.abrirModal();
   }
+
 
 }
