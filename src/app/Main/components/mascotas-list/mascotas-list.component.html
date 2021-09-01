@@ -20,11 +20,8 @@
 
     <div class="col-md-4" style="margin-top: 20px;" *ngFor="let mas of listaMascotas">
         <div class="card text-center"></div>
-        <div class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
+        <div style="border: 1px solid black;" class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
             {{mas.PetName | uppercase}}
-            <button class="btn btn-danger">
-                <i class="far fa-trash-alt"></i>
-            </button>
             <button (click)="abrirModalUsuario()" class="btn btn-danger">
                 <i class="fa fa-paw" aria-hidden="true"></i>
             </button>
@@ -32,9 +29,12 @@
         <!-- <img [src]=mas.Images> -->
         <img class="card-img-top" src="https://los40es00.epimg.net/los40/imagenes/2020/10/20/musica/1603221924_971405_1603223481_noticia_normal.jpg" alt="">
         <hr>
-        <div class="card-body">
-            <p>EDAD: {{mas.Age}}</p>
-            <p>DESCRIPCION: {{mas.Description | uppercase}}</p>
+        <div style="border: 2px solid black;
+        border-radius: 25px;" class="info card-body">
+            <p><strong>EDAD: </strong>{{mas.Age}}</p>
+            <p><strong>DESCRIPCION: </strong>{{mas.Description | uppercase}}</p>
+            <button class="btn btn-danger">
+                <i class="fa fa-eye" aria-hidden="true"></i> Ver mas...</button>
         </div>
     </div>
 
