@@ -20,14 +20,13 @@
 
     <div class="col-md-4" style="margin-top: 20px;" *ngFor="let mas of listaMascotas">
         <div class="card text-center"></div>
-        <div style="border: 1px solid black;" class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
             {{mas.PetName | uppercase}}
             <button (click)="abrirModalUsuario()" class="btn btn-danger">
                 <i class="fa fa-paw" aria-hidden="true"></i>
             </button>
         </div>
-        <!-- <img [src]=mas.Images> -->
-        <img class="card-img-top" src="https://los40es00.epimg.net/los40/imagenes/2020/10/20/musica/1603221924_971405_1603223481_noticia_normal.jpg" alt="">
+        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Labrador_Retriever_%281210559%29.jpg" alt="">
         <hr>
         <div style="border: 2px solid black;
         border-radius: 25px;" class="info card-body">

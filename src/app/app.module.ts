@@ -15,6 +15,7 @@ import { MascotasFormComponent } from './Main/components/mascotas-form/mascotas-
 import { NavigationComponent } from './Main/components/navigation/navigation.component';
 import { AboutUsComponent } from './Main/components/about-us/about-us.component';
 import { LoginComponent } from './Main/components/login/login.component';
+import { ImagePipe } from './main/pipes/image.pipe';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginComponent } from './Main/components/login/login.component';
     MascotasFormComponent,
     NavigationComponent,
     AboutUsComponent,
-    LoginComponent
+    LoginComponent,
+    ImagePipe
     ],
   imports: [
     BrowserModule,
