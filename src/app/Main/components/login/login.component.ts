@@ -1,8 +1,10 @@
 import { Component, Pipe } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Subscriber, Observable } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
-import { Observable} from 'rxjs';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -17,20 +19,30 @@ export class LoginComponent{
     password: ['informatica2021', Validators.required]
   })
 
-  constructor(private router: Router,
+  constructor(
               private fb: FormBuilder,
+              private router: Router,
               private authService: AuthService) { }
 
 
-  signin(){
+  signin() {
     console.log(this.miFormulario.value);
-    
+    console.log(this.miFormulario.valid);
     const { usuario, password } = this.miFormulario.value;
 
     this.authService.signin( usuario, password )
-    .observable( resp => {
+      .subscribe( auth => {
+
+        if ( auth === true ) {
+          this.router.navigateByUrl('/mascotas');
+        } else {
+          Swal.fire('Error', auth, 'error');
+        }
+      });
+
+    /* this.authService.signin( usuario, password )
+    .subscribe( resp => {
       console.log(resp);
-    });
-    //console.log(this.miFormulario.valid);
+    });  */
   }              
 }
