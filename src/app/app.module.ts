@@ -16,6 +16,7 @@ import { NavigationComponent } from './Main/components/navigation/navigation.com
 import { AboutUsComponent } from './Main/components/about-us/about-us.component';
 import { LoginComponent } from './Main/components/login/login.component';
 import { ImagePipe } from './main/pipes/image.pipe';
+import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ImagePipe } from './main/pipes/image.pipe';
     NavigationComponent,
     AboutUsComponent,
     LoginComponent,
-    ImagePipe
+    ImagePipe,
+    DashboardComponent
     ],
   imports: [
     BrowserModule,

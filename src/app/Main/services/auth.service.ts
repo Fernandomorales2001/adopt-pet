@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../../environments/environment.prod';
+import { environment } from '../../../environments/environment';
 import { AuthResponse, Usuario } from '../interfaces/auth.interface';
 import { catchError, map, tap } from 'rxjs/operators';
 import { of, Observable, Subscriber } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -32,32 +33,28 @@ export class AuthService {
         if ( resp.auth ) {
           localStorage.setItem('auth', resp.token!);
         }
+        console.log(resp);
       }),
       map( resp => resp.auth),
-      catchError ( err => of(err.error.msg))
+      catchError ( err => of(false))
     );
   }
 
-  validarAuth(): Observable<boolean> {
+  registro( nombreUsuario: string, correo: string, password: string, telefono: string, direccion: string ) {
+    const url  = `${ this.baseUrl }/usuario/signup`;
+    const body = { nombreUsuario, correo, password, telefono, direccion };
 
-    const url = `${ this.baseUrl }/auth/renew`;
-    const headers = new HttpHeaders()
-      .set('x-token', localStorage.getItem('auth') || '' );
-
-    return this.http.get<AuthResponse>( url, { headers } )
-        .pipe(
-          map( resp => {
-            localStorage.setItem('auth', resp.token! );
-            this._usuario = {
-              nombre: resp.nombre!,
-              apellido: resp.apellido!,
-              usuario: resp.usuario!
-            }
-
-            return resp.auth;
-          }),
-          catchError( err => of(false) )
-        );
+    return this.http.post<AuthResponse>( url, body )
+      .pipe(
+        tap( ({ auth, token }) => {
+          if ( auth ) {
+            localStorage.setItem('token', token! );
+          }
+        }),
+        map( resp => resp.auth ),
+        catchError( err => of(false) )
+      );
 
   }
+
 }

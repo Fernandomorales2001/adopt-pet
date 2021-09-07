@@ -36,13 +36,22 @@ export class LoginComponent{
         if ( auth === true ) {
           this.router.navigateByUrl('/mascotas');
         } else {
-          Swal.fire('Error', auth, 'error');
+          Swal.fire('Error', 'error');
         }
       });
-
-    /* this.authService.signin( usuario, password )
-    .subscribe( resp => {
-      console.log(resp);
-    });  */
-  }              
+  }     
+  
+  signup() {
+    Swal.fire({
+      imageUrl: 'https://images-platform.99static.com//5UVmo34lvV8g_hpGoYc1U008wT8=/497x2491:998x2992/fit-in/500x500/99designs-contests-attachments/104/104308/attachment_104308310',
+      imageWidth: 120,
+      title: 'Por favor espere...',
+      showConfirmButton: false,
+      timer: 1000,
+      onBeforeOpen: () => {
+        Swal.showLoading()
+      }
+    })
+    this.router.navigate(['mascotas/sign']);
+  }
 }

@@ -4,6 +4,7 @@ import { AboutUsComponent } from './Main/components/about-us/about-us.component'
 import { MascotasFormComponent } from './Main/components/mascotas-form/mascotas-form.component';
 import { MascotasListComponent } from './Main/components/mascotas-list/mascotas-list.component';
 import { LoginComponent } from './Main/components/login/login.component';
+import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: '',
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'mascotas/sign',
     component: MascotasFormComponent
+  },
+  {
+    path: 'mascotas/dashboard',
+    component: DashboardComponent
   }
 ];
 
