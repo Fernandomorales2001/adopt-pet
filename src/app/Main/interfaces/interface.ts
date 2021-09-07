@@ -5,3 +5,8 @@ export interface Mascotas {
     Age?: number;
     Images?: string;
 }
+
+export interface AuthResponse {
+    auth?: boolean;
+    token?: string;
+}
