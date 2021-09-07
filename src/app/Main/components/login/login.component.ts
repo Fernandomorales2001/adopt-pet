@@ -1,31 +1,36 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import Swal from 'sweetalert2';
+import { Component, Pipe } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { Observable} from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent{
+
+  miFormulario: FormGroup = this.fb.group({
+    usuario: ['fq962', [Validators.required]],
+    password: ['informatica2021', Validators.required]
+  })
+
+  constructor(private router: Router,
+              private fb: FormBuilder,
+              private authService: AuthService) { }
 
 
-  constructor(private router: Router) { }
+  signin(){
+    console.log(this.miFormulario.value);
+    
+    const { usuario, password } = this.miFormulario.value;
 
-  ngOnInit(): void {
-  }
-
-  sign() {
-    Swal.fire({
-      imageUrl: 'https://images-platform.99static.com//5UVmo34lvV8g_hpGoYc1U008wT8=/497x2491:998x2992/fit-in/500x500/99designs-contests-attachments/104/104308/attachment_104308310',
-      imageWidth: 120,
-      title: 'Por favor espere...',
-      showConfirmButton: false,
-      timer: 1000,
-      onBeforeOpen: () => {
-        Swal.showLoading()
-      }
-    })
-    this.router.navigate(['mascotas/sign']);
-  }
+    this.authService.signin( usuario, password )
+    .observable( resp => {
+      console.log(resp);
+    });
+    //console.log(this.miFormulario.valid);
+  }              
 }
