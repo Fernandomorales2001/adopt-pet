@@ -16,7 +16,7 @@ export class MascotasFormComponent {
     nombreUsuario:     ['Test 4', [ Validators.required ]],
     correo:    ['test4@test.com', [ Validators.required, Validators.email ]],
     password: ['123456', [ Validators.required, Validators.minLength(6) ]],
-    telefono:    ['98152678', [ Validators.required, Validators.minLength(8) ]],
+    telefono:    ['995278964', [ Validators.required, Validators.minLength(8) ]],
     direccion: ['Choloma City', [ Validators.required ]],
   });
 
