@@ -18,8 +18,6 @@ export class AuthService {
     return { ...this._usuario };
   }
 
-
-
   constructor( private http: HttpClient) { }
 
   signin( usuario: string, password: string) {
@@ -36,7 +34,7 @@ export class AuthService {
         console.log(resp);
       }),
       map( resp => resp.auth),
-      catchError ( err => of(false))
+      catchError ( err => of(err.error.message))
     );
   }
 
@@ -52,9 +50,13 @@ export class AuthService {
           }
         }),
         map( resp => resp.auth ),
-        catchError( err => of(false) )
+        catchError( err => of(err.error.message) )
       );
 
+  }
+
+  logout(){
+    localStorage.clear();
   }
 
 }

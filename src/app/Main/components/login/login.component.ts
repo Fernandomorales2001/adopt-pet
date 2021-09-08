@@ -27,15 +27,14 @@ export class LoginComponent{
 
   signin() {
     console.log(this.miFormulario.value);
-    // console.log(this.miFormulario.valid);
     const { usuario, password } = this.miFormulario.value;
 
     this.authService.signin( usuario, password )
       .subscribe( auth => {
-        if ( auth === true ) {
-          this.router.navigateByUrl('/mascotas');
+        if ( auth === true) {
+          this.router.navigate(['/mascotas']);
         } else {
-          Swal.fire('Error', 'error');
+          Swal.fire('Error', auth, 'error');
         }
       });
   }     
