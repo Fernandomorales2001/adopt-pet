@@ -46,7 +46,7 @@ export class MascotasFormComponent {
       .subscribe( resp => {
 
         if ( resp === true ) {
-          this.router.navigateByUrl('/mascotas');
+          this.router.navigateByUrl('mascotas/login');
         } else {
           Swal.fire('Error', 'error');
         }
