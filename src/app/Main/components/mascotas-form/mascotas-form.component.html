@@ -25,6 +25,10 @@
                type="email" 
                formControlName="correo"
                placeholder="Ingrese su email">
+        <span class="form-text text-danger"
+              *ngIf="campoNoValido('email')">
+            El correo es obligatorio
+        </span>
         <span class="focus-input100"></span>
     </div>
 

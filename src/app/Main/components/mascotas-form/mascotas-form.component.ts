@@ -11,19 +11,24 @@ import { AuthService } from '../../services/auth.service';
 })
 export class MascotasFormComponent {
 
+  emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   miFormulario: FormGroup = this.fb.group({
-    nombreUsuario:     ['Test 4', [ Validators.required ]],
-    correo:    ['test4@test.com', [ Validators.required, Validators.email ]],
-    password: ['123456', [ Validators.required, Validators.minLength(6) ]],
-    telefono:    ['995278964', [ Validators.required, Validators.minLength(8) ]],
-    direccion: ['Choloma City', [ Validators.required ]],
+    nombreUsuario:     ['', [ Validators.required ]],
+    correo:    ['', [ Validators.required, Validators.pattern(this.emailPattern) ]],
+    password: ['', [ Validators.required, Validators.minLength(6) ]],
+    telefono:    ['', [ Validators.required, Validators.minLength(8) ]],
+    direccion: ['', [ Validators.required ]],
   });
 
   constructor(private router: Router,
     private fb: FormBuilder,
     private authService: AuthService) { }
 
+    campoNoValido(campo: string){
+      return this.miFormulario.get(campo)?.invalid
+      && this.miFormulario.get(campo)?.touched;
+    }
 
   sign() {
     Swal.fire({
