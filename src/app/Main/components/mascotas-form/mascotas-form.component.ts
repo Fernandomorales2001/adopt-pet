@@ -36,7 +36,7 @@ export class MascotasFormComponent {
         Swal.showLoading()
       }
     })
-    this.router.navigate(['mascotas/sign']);
+    this.router.navigate(['mascotas/login']);
   }
 
   registro() {
