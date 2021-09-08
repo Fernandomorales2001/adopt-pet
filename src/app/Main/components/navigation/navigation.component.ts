@@ -32,9 +32,10 @@ export class NavigationComponent implements OnInit {
 
   CerrarSesion(){
     Swal.fire({
-      imageUrl: 'https://images-platform.99static.com//5UVmo34lvV8g_hpGoYc1U008wT8=/497x2491:998x2992/fit-in/500x500/99designs-contests-attachments/104/104308/attachment_104308310',
+      imageUrl: 'https://www.bluetissuemexico.com/img/inicia-sesion.gif',
       imageWidth: 120,
       title: 'Por favor espere...',
+      text: 'Cerrando sesion',
       showConfirmButton: false,
       timer: 1000,
       onBeforeOpen: () => {

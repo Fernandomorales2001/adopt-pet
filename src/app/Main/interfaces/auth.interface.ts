@@ -1,13 +1,12 @@
 
-
 export interface AuthResponse {
     auth?: boolean;
     token?: string;
 }
 
 export interface Usuario {
-    nombreUsuario?: string;
-    correo?: string;
-    telefono?: string;
-    direccion?: string;
+    auth?: boolean;
+    token?: string;
+    // telefono?: string;
+    // direccion?: string;
 }

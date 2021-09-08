@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { AuthResponse, Usuario } from '../interfaces/auth.interface';
 import { catchError, map, tap } from 'rxjs/operators';
-import { of, Observable, Subscriber } from 'rxjs';
+import { of } from 'rxjs';
 import Swal from 'sweetalert2';
 
 @Injectable({
