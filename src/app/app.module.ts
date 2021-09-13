@@ -17,6 +17,7 @@ import { AboutUsComponent } from './Main/components/about-us/about-us.component'
 import { LoginComponent } from './Main/components/login/login.component';
 import { ImagePipe } from './main/pipes/image.pipe';
 import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
+import { ModalVermasComponent } from './Main/Models/modal-vermas/modal-vermas.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DashboardComponent } from './Main/components/dashboard/dashboard.compon
     AboutUsComponent,
     LoginComponent,
     ImagePipe,
-    DashboardComponent
+    DashboardComponent,
+    ModalVermasComponent
     ],
   imports: [
     BrowserModule,
