@@ -4,6 +4,7 @@ export interface Mascotas {
     Description?: string;
     Age?: number;
     Images?: string;
+    alt_img?: string;
 }
 
 export interface AuthResponse {

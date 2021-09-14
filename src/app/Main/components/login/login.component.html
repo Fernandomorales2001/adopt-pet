@@ -1,12 +1,16 @@
-
+<!--             [formGroup]="miFormulario"
+            (ngSubmit)="signin()" 
+        [disabled]="miFormulario.invalid"
+    formControlName="usuario" 
+formControlName="password"-->
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
             <form 
             class="login100-form" 
             autocomplete="off"
-            [formGroup]="miFormulario"
-            (ngSubmit)="signin()">
+            (submit)="signin()"
+            >
                 
                 <span class="login100-form-title p-b-49">
                     Login
@@ -16,7 +20,9 @@
                     <span class="label-input100">Usuario</span>
                     <input class="input100"
                            type="usuario" 
-                           formControlName="usuario" 
+                           
+                           [(ngModel)]="user.usuario"
+                           autofocus
                            placeholder="Ingrese su Usuario">
                     <span class="focus-input100"></span>
                 </div>
@@ -25,7 +31,8 @@
                     <span class="label-input100">Contraseña</span>
                     <input class="input100"
                            type="password"
-                           formControlName="password"
+                           
+                           [(ngModel)]="user.password"
                            placeholder="Ingrese su Contraseña">
                     <span class="focus-input100"></span>
                 </div>
@@ -36,7 +43,7 @@
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
                         <button type="submit" 
-                        [disabled]="miFormulario.invalid"
+                        
                         class="login100-form-btn">
                             Login
                         </button>

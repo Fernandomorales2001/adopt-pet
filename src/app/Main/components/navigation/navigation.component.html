@@ -6,7 +6,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul  class="navbar-nav ml-auto">
+              <ul  class="navbar-nav">
                 <li class="nav-item">
                   <a style="color: #7B4723;" class="nav-link active" aria-current="page" routerLink="mascotas" routerLinkActive="active"><i class="fas fa-home"></i> INICIO</a>
                 </li>
@@ -16,12 +16,14 @@
                 <li class="nav-item">
                     <a style="color: #7B4723;" class="nav-link" routerLink="/empleados/add" routerLinkActive="active"><i class="fas fa-hand-holding-usd"></i>DONACIONES</a>
                   </li>
-                  <li class="nav-item">
-                    <button class="nav-link" title="INICIO DE SESION" (click)="iniciarSesion()" style="background-color: #E8D3BA; border-radius: 10px; color: #7B4723;"><strong>INCIAR SESION</strong></button>
-                  </li>
-                  <li class="nav-item">
-                    <button class="nav-link" title="INICIO DE SESION" (click)="CerrarSesion()" style="background-color: #E8D3BA; border-radius: 10px; color: #7B4723;"><strong>CERRAR SESION</strong></button>
-                  </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link border border-dark" title="INICIO DE SESION" (click)="iniciarSesion()" style="background-color: #E8D3BA; border-radius: 10px; color: #7B4723;"><strong>INCIAR SESION</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link border border-dark" title="REGISTRARSE" (click)="SignUp()" style="background-color: #E8D3BA; border-radius: 10px; color: #7B4723;"><strong>REGISTRARSE</strong></a>
+                </li>
               </ul>
             </div>
           </div>

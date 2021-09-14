@@ -17,6 +17,9 @@ import { AboutUsComponent } from './Main/components/about-us/about-us.component'
 import { LoginComponent } from './Main/components/login/login.component';
 import { ImagePipe } from './main/pipes/image.pipe';
 import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
+import { TasksComponent } from './main/components/tasks/tasks.component';
+import { PrivateTasksComponent } from './main/components/private-tasks/private-tasks.component';
+import { ImagenPipe } from './pipes/imagen.pipe';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { DashboardComponent } from './Main/components/dashboard/dashboard.compon
     AboutUsComponent,
     LoginComponent,
     ImagePipe,
-    DashboardComponent
+    DashboardComponent,
+    TasksComponent,
+    PrivateTasksComponent,
+    ImagenPipe
     ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import { DashboardComponent } from './Main/components/dashboard/dashboard.compon
     ModalModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

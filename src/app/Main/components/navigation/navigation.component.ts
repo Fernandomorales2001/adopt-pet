@@ -30,19 +30,18 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['mascotas/login']);
   }
 
-  CerrarSesion(){
+  SignUp(){
     Swal.fire({
       imageUrl: 'https://www.bluetissuemexico.com/img/inicia-sesion.gif',
       imageWidth: 120,
       title: 'Por favor espere...',
-      text: 'Cerrando sesion',
       showConfirmButton: false,
       timer: 1000,
       onBeforeOpen: () => {
         Swal.showLoading()
       }
     })
-    this.router.navigateByUrl('mascotas');
+    this.router.navigateByUrl('mascotas/sign');
     this.authservice.logout();
   }
 }

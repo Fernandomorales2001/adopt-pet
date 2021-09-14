@@ -5,6 +5,8 @@ import { MascotasFormComponent } from './Main/components/mascotas-form/mascotas-
 import { MascotasListComponent } from './Main/components/mascotas-list/mascotas-list.component';
 import { LoginComponent } from './Main/components/login/login.component';
 import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
+import { TasksComponent } from './main/components/tasks/tasks.component';
+import { PrivateTasksComponent } from './main/components/private-tasks/private-tasks.component';
 const routes: Routes = [
   {
     path: '',
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'mascotas/dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'mascotas/tasks',
+    component: TasksComponent
+  },
+  {
+    path: 'mascotas/private',
+    component: PrivateTasksComponent
   }
 ];
 

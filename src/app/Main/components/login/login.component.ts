@@ -15,10 +15,15 @@ import { Router } from '@angular/router';
 export class LoginComponent{
 
   miFormulario: FormGroup = this.fb.group({
-    usuario: ['fq962', [Validators.required]],
-    password: ['informatica2021', Validators.required]
+    usuario: ['', [Validators.required]],
+    password: ['', Validators.required]
   })
 
+  user = {
+    usuario: '',
+    password: ''
+  }
+  
   constructor(
               private fb: FormBuilder,
               private router: Router,
@@ -37,6 +42,7 @@ export class LoginComponent{
           Swal.fire('Error', auth, 'error');
         }
       });
+    // console.log(this.user)
   }     
   
   signup() {

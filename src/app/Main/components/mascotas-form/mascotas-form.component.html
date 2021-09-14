@@ -4,8 +4,9 @@
             <form class="login100-form"
       autocomplete="off"
       [formGroup]="miFormulario"
-      (ngSubmit)="registro()">
-                
+      (ngSubmit)="registro()"
+      >
+                <!-- (submit)="signUp()" -->
     <span class="login100-form-title p-b-49">
         Nuevo usuario
     </span>
@@ -15,6 +16,7 @@
         <input class="input100"
                type="text" 
                formControlName="nombreUsuario"
+               autofocus
                placeholder="Ingrese su usuario">
         <span class="focus-input100"></span>
     </div>
