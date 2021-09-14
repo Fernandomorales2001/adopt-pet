@@ -24,13 +24,13 @@ data-backdrop="static" aria-hidden="true">
                             <div class="col-6">
                                 <div class="form-group">
                                     <small for="inputAddress">NOMBRE: </small>
-                                    <input [(ngModel)]="mascota.PetName" type="text" class="form-control text-uppercase" disabled>
+                                    <input name="PetName" [(ngModel)]="mascota.PetName" type="text" class="form-control text-uppercase" disabled>
                                 </div>
                             </div>
                             <div class="col-6">
                               <div class="form-group">
                                   <small for="inputAddress">AÑOS: </small>
-                                  <input [(ngModel)]="mascota.Age" type="text" class="form-control" disabled>
+                                  <input name="Age" [(ngModel)]="mascota.Age" type="text" class="form-control" disabled>
                               </div>
                           </div>
                     </div>
@@ -38,7 +38,7 @@ data-backdrop="static" aria-hidden="true">
                       <div class="col-12">
                         <div class="form-group">
                             <small for="inputAddress">DESCRIPCION: </small>
-                            <input [(ngModel)]="mascota.Description" type="text" class="form-control text-uppercase" disabled>
+                            <input name="Description" [(ngModel)]="mascota.Description" type="text" class="form-control text-uppercase" disabled>
                         </div>
                     </div>
                       </div>

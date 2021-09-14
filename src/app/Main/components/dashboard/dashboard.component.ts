@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { Usuario } from '../../interfaces/auth.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,6 +16,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class DashboardComponent  {
 
+  usuarios: Usuario;
 
   get usuario() {
     return this.authService.usuario;
