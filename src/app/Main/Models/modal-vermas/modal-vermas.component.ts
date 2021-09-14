@@ -1,22 +1,49 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap/modal';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+import { Mascotas } from '../../interfaces/interface';
+import { MascotasServiceService } from '../../services/mascotas-service.service';
 
 @Component({
   selector: 'app-modal-vermas',
   templateUrl: './modal-vermas.component.html',
-  styleUrls: ['./modal-vermas.component.css']
+  styleUrls: ['./modal-vermas.component.css'],
+  styles: [`
+  img {
+    width: 50%;
+    border-radius: 5px;
+  }
+`]
 })
 export class ModalVermasComponent implements OnInit {
 
   @ViewChild('modalVerMas', { static: false }) modalVerMas: ModalDirective;
 
-  constructor() { }
+  mascota: Mascotas = {
+    PetName:        '',
+    _id:            '',
+    Description:    '',
+    Age:             0   
+  };
+
+
+  constructor(private mascotasserviceService: MascotasServiceService) { }
 
   
   ngOnInit(): void {
   }
 
-  abrirModalVerMas(){
+  async abrirModalVerMas(_id: string){
+    console.log(_id);
+    if (_id!=null) {
+      await this.mascotasserviceService.getMascotaById(_id).then( (res:any) =>
+      {
+        this.mascota = res;
+        this.mascota._id = _id
+        console.log(this.mascota);
+      })
+    }
         this.modalVerMas.show(); 
   }
 

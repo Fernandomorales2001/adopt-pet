@@ -12,6 +12,7 @@ import { ModalVermasComponent } from '../../Models/modal-vermas/modal-vermas.com
 export class MascotasListComponent implements OnInit {
   @ViewChild('controlUsuario', {static: false}) controlUsuario: ModalMantenimientoUsuariosAppComponent
   @ViewChild('controlVerMas', {static: false}) controlVerMas: ModalVermasComponent
+  _id: string = null;
   constructor(private mascotasServiceService: MascotasServiceService,
     ) {
    }
@@ -38,8 +39,9 @@ async getMascotas(){
     this.controlUsuario.abrirModal();
   }
   
-  abrirModalVerMas(){
-    this.controlVerMas.abrirModalVerMas();
+  abrirModalVerMas(_id:string=null){
+    this.controlVerMas.abrirModalVerMas(_id);
+    console.log(JSON.stringify(_id))
   }
 
 }

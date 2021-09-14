@@ -34,7 +34,7 @@
         border-radius: 25px;" class="info card-body">
             <p><strong>EDAD: </strong>{{mas.Age}}</p>
             <p><strong>DESCRIPCION: </strong>{{mas.Description | uppercase}}</p>
-            <button style="background-color: #7B4723; border-color: #7B4723;" (click)="abrirModalVerMas()" class="btn btn-danger">
+            <button style="background-color: #7B4723; border-color: #7B4723;" (click)="abrirModalVerMas(mas._id)" class="btn btn-danger">
                 <i class="fa fa-eye" aria-hidden="true"></i> Ver mas...</button>
         </div>
     </div>

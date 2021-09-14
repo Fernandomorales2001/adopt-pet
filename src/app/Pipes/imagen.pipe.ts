@@ -7,7 +7,7 @@ import { Mascotas } from '../Main/interfaces/interface';
 export class ImagenPipe implements PipeTransform {
 
   transform(mascotas: Mascotas): string {
-    console.log(mascotas)
+    console.log(JSON.stringify(mascotas));
     return `assets/img/${ mascotas._id }.jpg`;
   }
 

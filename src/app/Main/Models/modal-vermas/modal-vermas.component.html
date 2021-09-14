@@ -3,7 +3,7 @@ data-backdrop="static" aria-hidden="true">
 <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
   <div class="modal-content redondear">
     <div class="modal-header bg-primary text-white">
-      <h4 id="dialog-sizes-name1" class="modal-title pull-left text-center"><img style="width: 50px;" src="assets/img/adoptado.svg" alt=""> INFO MASCOTA</h4>
+      <h4 id="dialog-sizes-name1" class="modal-title pull-left text-center"><img style="width: 50px;" src="assets/img/adoptado.svg" alt="">INFORMACION DE LA MASCOTA MASCOTA</h4>
       <button type="button" (click)="cerrar()" class="close pull-right" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -13,17 +13,24 @@ data-backdrop="static" aria-hidden="true">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+                          <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                  <img [src]="mascota | imagen" alt="">
+                                </div>
+                            </div>
+                    </div>
                     <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
                                     <small for="inputAddress">NOMBRE: </small>
-                                    <input type="text" class="form-control text-uppercase" placeholder="NOMBRE MASCOTA">
+                                    <input [(ngModel)]="mascota.PetName" type="text" class="form-control text-uppercase" disabled>
                                 </div>
                             </div>
                             <div class="col-6">
                               <div class="form-group">
-                                  <small for="inputAddress">EDAD: </small>
-                                  <input type="number" class="form-control" placeholder="EDAD MASCOTA">
+                                  <small for="inputAddress">AÑOS: </small>
+                                  <input [(ngModel)]="mascota.Age" type="text" class="form-control" disabled>
                               </div>
                           </div>
                     </div>
@@ -31,19 +38,10 @@ data-backdrop="static" aria-hidden="true">
                       <div class="col-12">
                         <div class="form-group">
                             <small for="inputAddress">DESCRIPCION: </small>
-                            <input type="text" class="form-control text-uppercase" placeholder="DESC">
+                            <input [(ngModel)]="mascota.Description" type="text" class="form-control text-uppercase" disabled>
                         </div>
                     </div>
                       </div>
-              <div class="row">
-                <div class="col-6">
-                    <div class="form-group">
-                        <small for="inputPassword2">TU PROXIMO AMIGO: </small>
-                        <input type="password" class="form-control text-uppercase" placeholder="INSERTE SU CONTRASEÑA">
-                    </div>
-                </div>
-                </div>
-              </div>
                 </div>
             </div>
         </div>
@@ -51,10 +49,9 @@ data-backdrop="static" aria-hidden="true">
   </div>
   <div class="modal-footer">
     <button (click)="cerrar()"  class="btn btn-danger">CERRAR</button>
-    <button class="btn btn-primary" >ADOPTAR</button>
+    <button class="btn btn-primary" >ENVIAR</button>
   </div>
     </div>
   </div>
-
-
+</div>
 
