@@ -1,38 +1,40 @@
 <LINK REL=StyleSheet HREF="mascotas-list.component.css" TYPE="text/css" MEDIA=screen>
     <div>
         <div class="div-conta" style="margin-left: auto; margin-right: auto; margin-top: 40px">
-            <p style="font-family: sans-serif; font-size: 42px; font-weight: bold;">
-                DALE LA VIDA <br>
-                QUE MERECE A <br>
+            <p style="color: #35261C; font-family: sans-serif; font-size: 42px; font-weight: bold; margin-bottom: 80px;">
+                DALE LA VIDA<br>
+                QUE MERECE A<br>
                 UNA MASCOTA!
             </p>
             <div class="imagen-home">
                 <img class="paw" src="https://pngimg.com/uploads/paw/paw_PNG72.png">
             </div>
         </div>
-            <p style="margin-top: -100px;">
-                Lorem ipsum dolosr sit amet consectetur adipisicing elit. <br> 
-                Dolorum ea reprehenderit sunt eius explicabo mollitia laborum <br> 
-                incidunt, quis tempora placeat tempore aperiam omnis odio <br> 
-                voluptatum porro iure autem recusandae vero.
+            <p style="margin-top: -100px; font-size: 20px; color: #35261C;">
+                <strong>Adopt Pet</strong> es una pagina conformada por varias organizaciones. <br> 
+                Buscamos darles un hogar a cada uno de los cachorros de la calle <br> 
+                para que tenga un cuidado y una vida que merecen, donde sean queridos, <br> 
+                no pierdas la oportunidad de adoptar a tu proximo <strong>¡MEJOR AMIGO!</strong>.
             </p>
     </div>
   
-    <div class="col-md-4" style="margin-top: 20px;" *ngFor="let mas of listaMascotas">
+    <div class="col-md-4" style="margin-top: 50px;" *ngFor="let mas of listaMascotas">
         <div class="card text-center"></div>
-        <div class="card-header bg-dark text-white d-flex justify-content-between alig-items-center">
+        <div class="card-header text-white d-flex justify-content-between alig-items-center"
+        style="background-color: #35261C;">
             {{mas.PetName | uppercase}}
-            <button (click)="abrirModalUsuario()" class="btn btn-danger">
+            <button (click)="abrirModalUsuario()" class="btn btn-danger"
+            style="background-color: #7B4723; border-color: #7B4723;">
                 <i class="fa fa-paw" aria-hidden="true"></i>
             </button>
         </div>
         <img class="card-img-top" [src]="mas | imagen">
         <hr>
-        <div style="border: 2px solid black;
+        <div style="border: 2px solid #35261C;
         border-radius: 25px;" class="info card-body">
             <p><strong>EDAD: </strong>{{mas.Age}}</p>
             <p><strong>DESCRIPCION: </strong>{{mas.Description | uppercase}}</p>
-            <button (click)="abrirModalVerMas()" class="btn btn-danger">
+            <button style="background-color: #7B4723; border-color: #7B4723;" (click)="abrirModalVerMas()" class="btn btn-danger">
                 <i class="fa fa-eye" aria-hidden="true"></i> Ver mas...</button>
         </div>
     </div>
