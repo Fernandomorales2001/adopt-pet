@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap/modal';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-mantenimiento-usuarios-app',
@@ -10,6 +9,7 @@ import Swal from 'sweetalert2';
 export class ModalMantenimientoUsuariosAppComponent implements OnInit {
 
   @ViewChild('modalUsuario', { static: false }) modalUsuario: ModalDirective;
+  abrirModalVerMas: any;
 
   constructor() { }
 

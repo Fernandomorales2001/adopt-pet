@@ -33,9 +33,10 @@
         border-radius: 25px;" class="info card-body">
             <p><strong>EDAD: </strong>{{mas.Age}}</p>
             <p><strong>DESCRIPCION: </strong>{{mas.Description | uppercase}}</p>
-            <button class="btn btn-danger">
+            <button (click)="abrirModalVerMas()" class="btn btn-danger">
                 <i class="fa fa-eye" aria-hidden="true"></i> Ver mas...</button>
         </div>
     </div>
 
     <app-modal-mantenimiento-usuarios-app #controlUsuario></app-modal-mantenimiento-usuarios-app>
+    <app-modal-vermas #controlVerMas></app-modal-vermas>

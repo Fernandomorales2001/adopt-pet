@@ -2,6 +2,7 @@ import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { Mascotas } from '../../interfaces/interface';
 import { ModalMantenimientoUsuariosAppComponent } from '../../Modals/modal-mantenimiento-usuarios-app/modal-mantenimiento-usuarios-app.component';
 import { MascotasServiceService } from '../../services/mascotas-service.service';
+import { ModalVermasComponent } from '../../Models/modal-vermas/modal-vermas.component';
 
 @Component({
   selector: 'app-mascotas-list',
@@ -10,6 +11,7 @@ import { MascotasServiceService } from '../../services/mascotas-service.service'
 })
 export class MascotasListComponent implements OnInit {
   @ViewChild('controlUsuario', {static: false}) controlUsuario: ModalMantenimientoUsuariosAppComponent
+  @ViewChild('controlVerMas', {static: false}) controlVerMas: ModalVermasComponent
   constructor(private mascotasServiceService: MascotasServiceService,
     ) {
    }
@@ -35,6 +37,9 @@ async getMascotas(){
   abrirModalUsuario(){
     this.controlUsuario.abrirModal();
   }
-
+  
+  abrirModalVerMas(){
+    this.controlVerMas.abrirModalVerMas();
+  }
 
 }
