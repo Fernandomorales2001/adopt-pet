@@ -2,8 +2,8 @@
 data-backdrop="static" aria-hidden="true">
 <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered" role="document">
   <div class="modal-content redondear">
-    <div class="modal-header bg-primary text-white">
-      <h4 id="dialog-sizes-name1" class="modal-title pull-left text-center"><img style="width: 50px;" src="assets/img/adoptado.svg" alt="">INFORMACION DE LA MASCOTA MASCOTA</h4>
+    <div style="background-color: #7B4723;" class="modal-header">
+      <h4 id="dialog-sizes-name1" class="modal-title pull-left text-center text-white"><img style="width: 50px;" src="assets/img/adoptado.svg" alt="">INFORMACION DE LA MASCOTA</h4>
       <button type="button" (click)="cerrar()" class="close pull-right" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -34,22 +34,23 @@ data-backdrop="static" aria-hidden="true">
                               </div>
                           </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <div *ngFor="let mas of mascota; index as i; first as isFirst" class="form-group">
-                            <small for="inputAddress">DESCRIPCION: </small>
-                            <input name="Description" placeholder="{{mas.Description}}" type="text" class="form-control text-uppercase" disabled>
-                        </div>
                     </div>
+                    <div id="desc" class="row">
+                        <div class="col-10">
+                          <div *ngFor="let mas of mascota; index as i; first as isFirst" class="form-group">
+                              <small for="inputAddress">DESCRIPCION: </small>
+                              <h4>{{mas.Description}}</h4>
+                          </div>
                       </div>
+                      
                 </div>
             </div>
         </div>
     </div>
   </div>
   <div class="modal-footer">
-    <button (click)="cerrar()"  class="btn btn-danger">CERRAR</button>
-    <button class="btn btn-primary" >ENVIAR</button>
+    <button style="background-color: #35261C; text-decoration: #E8D3BA;" (click)="cerrar()"  class="btn text-white">CERRAR</button>
+    <button style="background-color: #E8D3BA; text-decoration: #7B4723;" class="btn" >ADOPTAR</button>
   </div>
     </div>
   </div>

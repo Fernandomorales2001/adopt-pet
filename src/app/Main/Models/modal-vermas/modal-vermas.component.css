@@ -1,0 +1,9 @@
+.card-body {
+    display: flex;
+}
+
+#desc {
+    display: flex;
+    margin-left: 600px;
+    margin-top: -150px;
+}
