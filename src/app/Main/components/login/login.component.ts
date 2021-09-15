@@ -37,6 +37,7 @@ export class LoginComponent{
     this.authService.signin( usuario, password )
       .subscribe( auth => {
         if ( auth === true) {
+          console.log(JSON.stringify(auth))
           this.router.navigate(['/mascotas']);
         } else {
           Swal.fire('Error', auth, 'error');

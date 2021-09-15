@@ -1,15 +1,15 @@
-<!--             [formGroup]="miFormulario"
-            (ngSubmit)="signin()" 
-        [disabled]="miFormulario.invalid"
-    formControlName="usuario" 
-formControlName="password"-->
+<!--             (submit)="signin()"
+                 [(ngModel)]="user.usuario"     
+                 [(ngModel)]="user.password"
+-->
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
             <form 
             class="login100-form" 
             autocomplete="off"
-            (submit)="signin()"
+            [formGroup]="miFormulario"
+            (ngSubmit)="signin()" 
             >
                 
                 <span class="login100-form-title p-b-49">
@@ -20,8 +20,7 @@ formControlName="password"-->
                     <span class="label-input100">Usuario</span>
                     <input class="input100"
                            type="usuario" 
-                           
-                           [(ngModel)]="user.usuario"
+                           formControlName="usuario"
                            autofocus
                            placeholder="Ingrese su Usuario">
                     <span class="focus-input100"></span>
@@ -31,8 +30,7 @@ formControlName="password"-->
                     <span class="label-input100">Contraseña</span>
                     <input class="input100"
                            type="password"
-                           
-                           [(ngModel)]="user.password"
+                           formControlName="password"
                            placeholder="Ingrese su Contraseña">
                     <span class="focus-input100"></span>
                 </div>
@@ -43,7 +41,7 @@ formControlName="password"-->
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
                         <button type="submit" 
-                        
+                        [disabled]="miFormulario.invalid"
                         class="login100-form-btn">
                             Login
                         </button>

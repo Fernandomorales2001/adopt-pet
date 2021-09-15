@@ -30,8 +30,8 @@ export class AuthService {
       tap( resp => {
         if ( resp.auth ) {
           localStorage.setItem('auth', resp.token!);
+          console.log(resp);
         }
-        console.log(resp);
       }),
       map( resp => resp.auth),
       catchError ( err => of(err.error.message))
