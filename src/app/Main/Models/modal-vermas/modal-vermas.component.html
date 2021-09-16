@@ -23,15 +23,22 @@ data-backdrop="static" aria-hidden="true">
                     <div class="row">
                             <div class="col-6">
                                 <div *ngFor="let mas of mascota; index as i; first as isFirst" class="form-group">
-                                    <small for="inputAddress">NOMBRE: </small>
-                                    <input name="PetName"  type="text" placeholder="{{mas.PetName}}" class="form-control text-uppercase" disabled>
+                                  <small for="inputAddress">ORGANIZACION: </small>
+                                  <input name="Name"  type="text" placeholder="{{mas.Organization.Name}}" class="form-control text-uppercase" disabled>
                                 </div>
+
+                                
+                              <div *ngFor="let mas of mascota; index as i; first as isFirst" class="form-group">
+                                  <small for="inputAddress">AÑOS DE EDAD: </small>
+                                  <input name="Age" placeholder="{{mas.Age}}" type="text" class="form-control" disabled>
+                              </div>
                             </div>
                             <div class="col-6">
                               <div *ngFor="let mas of mascota; index as i; first as isFirst" class="form-group">
-                                  <small for="inputAddress">AÑOS: </small>
-                                  <input name="Age" placeholder="{{mas.Age}}" type="text" class="form-control" disabled>
-                              </div>
+                                    <small for="inputAddress">NOMBRE MASCOTA: </small>
+                                    <input name="PetName"  type="text" placeholder="{{mas.PetName}}" class="form-control text-uppercase" disabled>
+                                
+                                  </div>
                           </div>
                     </div>
                     </div>

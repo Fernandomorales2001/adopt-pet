@@ -24,7 +24,10 @@ export class ModalVermasComponent implements OnInit {
     PetName:        '',
     _id:            '',
     Description:    '',
-    Age:             0   
+    Age:             0,
+    Organization: {
+      Name:      ''
+    }  
   };
 
 

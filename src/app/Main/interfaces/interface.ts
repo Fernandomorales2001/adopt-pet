@@ -5,6 +5,10 @@ export interface Mascotas {
     Age?: number;
     Images?: string;
     alt_img?: string;
+    Organization: {
+        Name?: string;
+    }
+
 }
 
 export interface AuthResponse {
