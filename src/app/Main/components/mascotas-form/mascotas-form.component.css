@@ -36,7 +36,7 @@ a:focus {
 
 a:hover {
     text-decoration: none;
-  color: #a64bf4;
+  color: #35261C;
 }
 
 /*---------------------------------------------*/
@@ -245,11 +245,11 @@ button:hover {
 }
 
 .input100:focus + .focus-input100::after {
-  color: #a64bf4;
+  color: #35261C;
 }
 
 .has-val.input100 + .focus-input100::after {
-  color: #a64bf4;
+  color: #35261C;
 }
 
 
@@ -286,8 +286,7 @@ button:hover {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: rgb(96,207,220);
-  background: linear-gradient(90deg, rgba(96,207,220,1) 0%, rgba(190,52,218,1) 92%);
+  background: #35261C;
   top: 0;
   left: -100%;
 
