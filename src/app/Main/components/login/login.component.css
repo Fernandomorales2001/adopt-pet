@@ -321,6 +321,10 @@ button:hover {
   left: 0;
 }
 
+.log {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .login100-form-btn:disabled {
   background-color: grey;
 }

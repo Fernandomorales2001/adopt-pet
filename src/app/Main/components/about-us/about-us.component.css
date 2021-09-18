@@ -13,11 +13,16 @@
 
 .tit {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 30px;
 }
 
-.lis-adopt {
-    font-family: sans-serif;
+.about- {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about {
+    font-family: 'Open Sans', sans-serif;
     text-align: justify;
     font-size: 18px;
     margin: 20px;

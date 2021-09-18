@@ -2,6 +2,9 @@
                  [(ngModel)]="user.usuario"
                  [(ngModel)]="user.password"
 -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    </style>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -12,12 +15,12 @@
             (ngSubmit)="signin()"
             >
 
-                <span class="login100-form-title p-b-49">
+                <span class=" log login100-form-title p-b-49">
                     Iniciar sesión
                 </span>
 
-                <div class="wrap-input100 m-b-23">
-                    <span class="label-input100">Usuario</span>
+                <div class=" log wrap-input100 m-b-23">
+                    <span class="log label-input100">Usuario</span>
                     <input class="input100"
                            type="usuario"
                            formControlName="usuario"
@@ -26,8 +29,8 @@
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100">
-                    <span class="label-input100">Contraseña</span>
+                <div class="log wrap-input100">
+                    <span class=" log label-input100">Contraseña</span>
                     <input class="input100"
                            type="password"
                            formControlName="password"
@@ -37,23 +40,23 @@
 
                 <div class="text-right p-t-8 p-b-31"></div>
 
-                <div class="container-login100-form-btn">
+                <div class=" log container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
                         <button type="submit"
                         [disabled]="miFormulario.invalid"
-                        class="login100-form-btn">
+                        class=" log login100-form-btn">
                             Iniciar
                         </button>
                     </div>
                 </div>
 
-                <div class="flex-col-c p-t-60">
+                <div class=" log flex-col-c p-t-60">
                     <a class="txt1 p-b-17 ">
                         ¿No tienes cuenta?
                     </a>
 
-                    <a (click)="signup()" class="txt2 pointer ">
+                    <a (click)="signup()" class="log txt2 pointer ">
                         Crear una aquí
                     </a>
                 </div>

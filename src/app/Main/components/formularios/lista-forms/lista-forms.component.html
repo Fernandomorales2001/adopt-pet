@@ -1,3 +1,6 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    </style>
 <div class="card">
     <div class="card-header text-white" style="background-color: #35261C;">
         LISTADO DE FORMULARIOS
@@ -12,39 +15,39 @@
                         >
                         <thead>
                             <!-- style="color: white; -->
-                            <tr class="text-white" style="background-color: #35261C;">
-                                <th class="text-center">
+                            <tr class="fo text-white" style="background-color: #35261C;">
+                                <th class="medio">
                                     NOMBRE DE SOLICITANTE
                                 </th>
-                                <th class="text-center">
+                                <th class="medio">
                                     TELEFONO
                                 </th>
-                                <th class="text-center">
+                                <th class="medio">
                                     CORREO
                                 </th>
-                                <th  class="text-center">
+                                <th  class="medio">
                                     NOMBRE DE MASCOTA
                                 </th>
-                                <th class="text-center">
+                                <th class="medio">
                                     EDAD
                                 </th>
-                                <th class="text-center">
+                                <th class="medio">
                                     RAZA
                                 </th>
-                                <th class="text-center">
+                                <th class="medio">
                                     MOTIVO DE ADOPCION
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="text-align: center;" *ngFor="let form of listaFormularios">
-                                <td>{{form.nombreSolicitante | uppercase}}</td>
-                                <td>{{form.telefono}}</td>
-                                <td>{{form.correo | uppercase}}</td>
-                                <td>{{form.nombreMascota | uppercase}}</td>
-                                <td>{{form.edad}}</td>
-                                <td>{{form.raza | uppercase}}</td>
-                                <td>{{form.motivoAdopcion | uppercase}}</td>
+                            <tr class="medio" *ngFor="let form of listaFormularios">
+                                <td class="medio">{{form.nombreSolicitante | uppercase}}</td>
+                                <td class="medio">{{form.telefono}}</td>
+                                <td class="medio">{{form.correo | uppercase}}</td>
+                                <td class="medio">{{form.nombreMascota | uppercase}}</td>
+                                <td class="medio">{{form.edad}}</td>
+                                <td class="medio">{{form.raza | uppercase}}</td>
+                                <td class="medio">{{form.motivoAdopcion | uppercase}}</td>
                             </tr>
                         </tbody>
                     </table>

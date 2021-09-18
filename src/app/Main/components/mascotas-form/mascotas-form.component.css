@@ -9,12 +9,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Poppins-Bold;
 }
 
 body, html {
     height: 100%;
-    font-family: Poppins-Regular, sans-serif;
 }
 
 .pointer{
@@ -22,7 +20,6 @@ body, html {
 }
 /*---------------------------------------------*/
 a {
-    font-family: Poppins-Regular;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -90,14 +87,12 @@ button:hover {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.5;
   color: #666666;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.5;
   color: #333333;
@@ -138,8 +133,11 @@ button:hover {
   width: 500px;
   background: #fff;
   border-radius: 10px;
-  font-family: sans-serif;
   overflow: hidden;
+}
+
+.sig {
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -152,7 +150,6 @@ button:hover {
 
 .login100-form-title {
   display: block;
-  font-family: Poppins-Bold;
   font-size: 39px;
   color: #333333;
   line-height: 1.2;
@@ -167,12 +164,11 @@ button:hover {
 .wrap-input100 {
   width: 100%;
   position: relative;
-  font-family: sans-serif;
+
   border-bottom: 2px solid #d9d9d9;
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
   font-size: 14px;
   color: #333333;
   line-height: 1.5;
@@ -180,7 +176,6 @@ button:hover {
 }
 
 .input100 {
-  font-family: Poppins-Medium;
   font-size: 16px;
   color: #333333;
   line-height: 1.2;
@@ -206,7 +201,6 @@ button:hover {
 
 .focus-input100::after {
   content: attr(data-symbol);
-  font-family: Material-Design-Iconic-Font;
   color: #adadad;
   font-size: 22px;
 
@@ -302,7 +296,6 @@ button:hover {
 }
 
 .login100-form-btn {
-  font-family: Poppins-Medium;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;

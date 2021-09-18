@@ -1,3 +1,6 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    </style>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -7,13 +10,13 @@
       (ngSubmit)="registro()"
       >
                 <!-- (submit)="signUp()" -->
-    <span class="login100-form-title p-b-49">
-        Nuevo usuario
+    <span class="sig login100-form-title p-b-49">
+        Nuevo Usuario
     </span>
 
-    <div class="wrap-input100 m-b-23">
+    <div class="sig wrap-input100 m-b-23">
         <span class="label-input100">Nombre de Usuario</span>
-        <input class="input100"
+        <input class="sig input100"
                type="text"
                formControlName="nombreUsuario"
                autofocus
@@ -22,12 +25,12 @@
     </div>
 
     <div class="wrap-input100 m-b-23">
-        <span class="label-input100">Correo</span>
-        <input class="input100"
+        <span class="sig label-input100">Correo</span>
+        <input class="sig input100"
                type="email"
                formControlName="correo"
                placeholder="Ingrese su email">
-        <span class="form-text text-danger"
+        <span class="sig form-text text-danger"
               *ngIf="campoNoValido('email')">
             El correo es obligatorio
         </span>
@@ -35,8 +38,8 @@
     </div>
 
     <div class="wrap-input100">
-        <span class="label-input100">Contraseña</span>
-        <input class="input100"
+        <span class="sig label-input100">Contraseña</span>
+        <input class="sig input100"
                type="password"
                formControlName="password"
                placeholder="Ingrese su contraseña">
@@ -44,8 +47,8 @@
     </div>
 
     <div class="wrap-input100">
-        <span class="label-input100">Telefono</span>
-        <input class="input100"
+        <span class="sig label-input100">Telefono</span>
+        <input class="sig input100"
                type="number"
                formControlName="telefono"
                placeholder="Ingrese su numero de telefono">
@@ -53,8 +56,8 @@
     </div>
 
     <div class="wrap-input100">
-        <span class="label-input100">Direccion</span>
-        <input class="input100"
+        <span class="sig label-input100">Direccion</span>
+        <input class="sig input100"
                type="text"
                formControlName="direccion"
                placeholder="Ingrese su direccion">
@@ -66,7 +69,7 @@
     <div class="container-login100-form-btn">
         <div class="wrap-login100-form-btn">
             <div class="login100-form-bgbtn"></div>
-            <button class="login100-form-btn"
+            <button class="sig login100-form-btn"
                     type="submit"
                     [disabled]="miFormulario.invalid">
                 Registro
@@ -75,11 +78,11 @@
     </div>
 
     <div class="flex-col-c p-t-60">
-        <span class="txt1 p-b-17">
+        <span class="sig txt1 p-b-17">
             ¿Ya tienes una cuenta?
         </span>
 
-        <a (click)="sign()" class="txt2 pointer">
+        <a (click)="sign()" class="sig txt2 pointer">
             Ingresa aquí
         </a>
     </div>
