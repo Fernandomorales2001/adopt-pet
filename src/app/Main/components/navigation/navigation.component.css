@@ -1,3 +1,18 @@
 #navbarNav {
     margin-left: 150px;
 }
+
+.nav-link .border .border-dark:hover{
+  background-color: #ceb79a !important;
+}
+
+.nav-button{
+  background-color: #E8D3BA;
+  border-radius: 10px;
+  color: #7B4723;
+  cursor:pointer;
+}
+
+.nav-button:hover{
+  background-color: #ceb79a !important;
+}

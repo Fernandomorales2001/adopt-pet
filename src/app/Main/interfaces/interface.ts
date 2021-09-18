@@ -3,11 +3,10 @@ export interface Mascotas {
     _id?: string;
     Description?: string;
     Age?: number;
-    Images?: string;
+
     alt_img?: string;
-    Organization: {
-        Name?: string;
-    }
+    Organization:any;
+    Images: any;
 
 }
 

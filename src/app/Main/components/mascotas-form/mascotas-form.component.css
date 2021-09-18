@@ -2,12 +2,12 @@
 [ FONT ]*/
 
 
-  
+
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 * {
-    margin: 0px; 
-    padding: 0px; 
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: Poppins-Bold;
 }
@@ -17,6 +17,9 @@ body, html {
     font-family: Poppins-Regular, sans-serif;
 }
 
+.pointer{
+    cursor:pointer;
+}
 /*---------------------------------------------*/
 a {
     font-family: Poppins-Regular;
@@ -115,7 +118,7 @@ button:hover {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;

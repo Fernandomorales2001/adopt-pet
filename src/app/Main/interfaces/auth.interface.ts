@@ -2,6 +2,7 @@
 export interface AuthResponse {
     auth?: boolean;
     token?: string;
+    user?: any;
 }
 
 export interface Usuario {

@@ -1,25 +1,25 @@
 <!--             (submit)="signin()"
-                 [(ngModel)]="user.usuario"     
+                 [(ngModel)]="user.usuario"
                  [(ngModel)]="user.password"
 -->
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form 
-            class="login100-form" 
+            <form
+            class="login100-form"
             autocomplete="off"
             [formGroup]="miFormulario"
-            (ngSubmit)="signin()" 
+            (ngSubmit)="signin()"
             >
-                
+
                 <span class="login100-form-title p-b-49">
-                    Login
+                    Iniciar sesión
                 </span>
 
                 <div class="wrap-input100 m-b-23">
                     <span class="label-input100">Usuario</span>
                     <input class="input100"
-                           type="usuario" 
+                           type="usuario"
                            formControlName="usuario"
                            autofocus
                            placeholder="Ingrese su Usuario">
@@ -34,26 +34,26 @@
                            placeholder="Ingrese su Contraseña">
                     <span class="focus-input100"></span>
                 </div>
-                
+
                 <div class="text-right p-t-8 p-b-31"></div>
-                
+
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button type="submit" 
+                        <button type="submit"
                         [disabled]="miFormulario.invalid"
                         class="login100-form-btn">
-                            Login
+                            Iniciar
                         </button>
                     </div>
                 </div>
 
                 <div class="flex-col-c p-t-60">
-                    <span class="txt1 p-b-17">
+                    <a class="txt1 p-b-17 ">
                         ¿No tienes cuenta?
-                    </span>
+                    </a>
 
-                    <a (click)="signup()" class="txt2">
+                    <a (click)="signup()" class="txt2 pointer ">
                         Crear una aquí
                     </a>
                 </div>

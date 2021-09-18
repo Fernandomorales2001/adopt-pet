@@ -27,13 +27,14 @@ export class ModalVermasComponent implements OnInit {
     Age:             0,
     Organization: {
       Name:      ''
-    }  
+    },
+    Images: [{}]
   };
 
 
   constructor(private mascotasserviceService: MascotasServiceService) { }
 
-  
+
   ngOnInit(): void {
   }
 
@@ -42,12 +43,12 @@ export class ModalVermasComponent implements OnInit {
     if (_id!=null) {
       await this.mascotasserviceService.getMascotaById(_id).then( (res:any) =>
       {
-        this.mascota = res;
+        this.mascota = res[0];
         this.mascota._id = _id
         console.log(this.mascota);
       })
     }
-        this.modalVerMas.show(); 
+        this.modalVerMas.show();
   }
 
   cerrar(){

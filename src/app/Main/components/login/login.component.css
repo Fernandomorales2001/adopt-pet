@@ -2,12 +2,12 @@
 [ FONT ]*/
 
 
-  
+
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 * {
-    margin: 0px; 
-    padding: 0px; 
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: Poppins-Bold;
 }
@@ -104,7 +104,9 @@ button:hover {
 
 .bg3 {background-color: #ea4335}
 
-
+.pointer{
+  cursor : pointer;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
@@ -114,7 +116,7 @@ button:hover {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;

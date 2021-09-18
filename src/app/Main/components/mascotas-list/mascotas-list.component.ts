@@ -3,6 +3,7 @@ import { Mascotas } from '../../interfaces/interface';
 import { ModalMantenimientoUsuariosAppComponent } from '../../Modals/modal-mantenimiento-usuarios-app/modal-mantenimiento-usuarios-app.component';
 import { MascotasServiceService } from '../../services/mascotas-service.service';
 import { ModalVermasComponent } from '../../Models/modal-vermas/modal-vermas.component';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-mascotas-list',
@@ -14,15 +15,17 @@ export class MascotasListComponent implements OnInit {
   @ViewChild('controlVerMas', {static: false}) controlVerMas: ModalVermasComponent
   _id: string = null;
   constructor(private mascotasServiceService: MascotasServiceService,
+    public authService: AuthService
     ) {
    }
 
    @HostBinding('class') clases = 'row';
 
    listaMascotas: any = [];
- 
+
   async ngOnInit () {
-    await this.getMascotas()
+    if(this.authService.isLoggedIn)
+      await this.getMascotas()
   }
 
 
@@ -35,10 +38,11 @@ async getMascotas(){
      });
  }
 
-  abrirModalUsuario(){
-    this.controlUsuario.abrirModal();
+  abrirModalUsuario( mascota){
+
+    this.controlUsuario.abrirModal(mascota);
   }
-  
+
   abrirModalVerMas(_id:string=null){
     this.controlVerMas.abrirModalVerMas(_id);
     console.log(JSON.stringify(_id))

@@ -10,10 +10,16 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavigationComponent implements OnInit {
 
+  isAdmin:boolean=false;
+
   constructor(private router: Router,
-    private authservice: AuthService) { }
+    public authservice: AuthService) { }
 
   ngOnInit(): void {
+    if(this.authservice.currentUser){
+      if(this.authservice.currentUser.tipoUsuario == 'admin')
+        this.isAdmin =true;
+    }
   }
 
   iniciarSesion() {
@@ -27,7 +33,8 @@ export class NavigationComponent implements OnInit {
         Swal.showLoading()
       }
     })
-    this.router.navigate(['mascotas/login']);
+    this.router.navigate(['mascotas/login'])
+
   }
 
   SignUp(){
@@ -41,7 +48,15 @@ export class NavigationComponent implements OnInit {
         Swal.showLoading()
       }
     })
-    this.router.navigateByUrl('mascotas/sign');
+    this.router.navigate(['mascotas/sign']);
     this.authservice.logout();
+  }
+
+  logOut(){
+    this.authservice.logout();
+    this.router.navigate(['mascotas/login'])
+    .then(() => {
+      window.location.reload();
+    });
   }
 }

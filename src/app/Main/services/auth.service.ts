@@ -13,24 +13,32 @@ export class AuthService {
 
   private baseUrl: string = environment.baseUrl;
   private _usuario!: Usuario;
-
+  public isLoggedIn:boolean;
+  public currentUser:any;
   get usuario() {
     return { ...this._usuario };
   }
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient) {
+    this.isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    this.currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    console.log('currente user',this.currentUser);
+
+   }
 
   signin( usuario: string, password: string) {
 
     const url = `${this.baseUrl}/usuario/signin`;
     const body = { usuario, password };
-    
+
     return this.http.post<AuthResponse>( url, body )
     .pipe(
       tap( resp => {
         if ( resp.auth ) {
-          localStorage.setItem('auth', resp.token!);
-          console.log(resp);
+          localStorage.setItem('token', resp.token!);
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("currentUser", JSON.stringify(resp.user));
+
         }
       }),
       map( resp => resp.auth),
@@ -41,6 +49,7 @@ export class AuthService {
   registro( nombreUsuario: string, correo: string, password: string, telefono: string, direccion: string ) {
     const url  = `${ this.baseUrl }/usuario/signup`;
     const body = { nombreUsuario, correo, password, telefono, direccion };
+
 
     return this.http.post<AuthResponse>( url, body )
       .pipe(

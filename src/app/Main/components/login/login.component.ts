@@ -23,7 +23,7 @@ export class LoginComponent{
     usuario: '',
     password: ''
   }
-  
+
   constructor(
               private fb: FormBuilder,
               private router: Router,
@@ -38,14 +38,17 @@ export class LoginComponent{
       .subscribe( auth => {
         if ( auth === true) {
           console.log(JSON.stringify(auth))
-          this.router.navigate(['/mascotas']);
+          this.router.navigate(['/mascotas'])
+          .then(() => {
+            window.location.reload();
+          });;
         } else {
-          Swal.fire('Error', auth, 'error');
+          Swal.fire('Error', 'Credenciales incorrectas', 'error');
         }
       });
     // console.log(this.user)
-  }     
-  
+  }
+
   signup() {
     Swal.fire({
       imageUrl: 'https://images-platform.99static.com//5UVmo34lvV8g_hpGoYc1U008wT8=/497x2491:998x2992/fit-in/500x500/99designs-contests-attachments/104/104308/attachment_104308310',
