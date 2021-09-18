@@ -25,6 +25,10 @@
             style="background-color: #7B4723; border-color: #7B4723;">
                 <i class="fa fa-paw" aria-hidden="true"></i>
             </button>
+            <button *ngIf="authService.isLoggedIn && authService.currentUser.tipoUsuario == 'admin'" [routerLink]="['/mascotas/edit']" class="btn btn-danger"
+            style="background-color: #7B4723; border-color: #7B4723;">
+                <i class="fa fa-edit" aria-hidden="true"></i>
+            </button>
         </div>
         <img class="card-img-top" [src]="mas.Images[0].image">
         <hr>

@@ -39,17 +39,6 @@ export class MascotasCrudComponent implements OnInit {
      private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // const params = this.activatedRoute.snapshot.params;
-    // if (params.id) {
-    //   this.mascotaserviceService.getMascota(params._id)
-    //   .subscribe( res=> { 
-    //     console.log(res);
-    //       this.mascota = res;
-    //       this.edit = true;
-    //     },
-    //     err => console.error(err)
-    //   )
-    // }
   }
 
   saveNewPet(){
@@ -72,6 +61,19 @@ export class MascotasCrudComponent implements OnInit {
           this.router.navigate(['/mascotas']);
         },
             err => console.error(err)) 
+    }
+
+    updatePet() {
+
+      this.mascotaserviceService.updateMascota()
+        .then(
+          res => { 
+            console.log(res);
+            this.edit == true;
+            this.router.navigate(['/mascotas']);
+          },
+          err => console.error(err)
+        )
     }
 
 }

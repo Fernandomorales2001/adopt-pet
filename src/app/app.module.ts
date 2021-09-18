@@ -15,10 +15,10 @@ import { MascotasFormComponent } from './Main/components/mascotas-form/mascotas-
 import { NavigationComponent } from './Main/components/navigation/navigation.component';
 import { AboutUsComponent } from './Main/components/about-us/about-us.component';
 import { LoginComponent } from './Main/components/login/login.component';
-import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { ModalVermasComponent } from './Main/Models/modal-vermas/modal-vermas.component';
 import { MascotasCrudComponent } from './Main/components/mascotas/mascotas-crud/mascotas-crud.component';
+import { ListaFormsComponent } from './main/components/formularios/lista-forms/lista-forms.component';
 
 
 
@@ -32,10 +32,10 @@ import { MascotasCrudComponent } from './Main/components/mascotas/mascotas-crud/
     NavigationComponent,
     AboutUsComponent,
     LoginComponent,
-    DashboardComponent,
     ImagenPipe,
     ModalVermasComponent,
-    MascotasCrudComponent
+    MascotasCrudComponent,
+    ListaFormsComponent
     ],
   imports: [
     BrowserModule,
