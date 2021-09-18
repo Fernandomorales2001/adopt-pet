@@ -11,3 +11,13 @@
     display: flex;
 }
 
+.tit {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lis-adopt {
+    text-align: justify;
+    margin: 20px;
+    font-weight: bold;
+}
