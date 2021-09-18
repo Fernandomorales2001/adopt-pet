@@ -120,6 +120,48 @@ export class MascotasServiceService {
         });
   }
 
+    
+  async guardarMascota(body: any){
+    Swal.fire(
+      {
+        title: 'Por favor espere',
+        text: 'Registrando datos',
+        allowOutsideClick: false,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+        }
+      }
+    )
+    const url = `${this.baseUrl}/addPet`;
+    const headers = {
+      "x-access-token" : localStorage.getItem("token")
+    }
+    let answer:any={}
+    console.log(body);
+
+    await this.https
+        .post(url, body, {headers})
+        .toPromise()
+        .then(async (ApiAnswer: any) => {
+          answer = ApiAnswer;
+          Swal.close()
+          Swal.fire({
+            imageWidth: 120,
+            title: '¡Mascota agregada con exito!',
+            showConfirmButton: false,
+            timer: 1000,
+            icon: 'success',
+          })
+        })
+        .catch(async (error) => {
+          Swal.close()
+          Swal.fire({
+            icon: 'error',
+            title: 'Servicio no disponible: ' + error
+          })
+        });
+  }
+
 
 }
 

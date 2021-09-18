@@ -3,10 +3,9 @@ export interface Mascotas {
     _id?: string;
     Description?: string;
     Age?: number;
-
-    alt_img?: string;
     Organization:any;
-    Images: any;
+    meta?: any;
+    Images?: any;
 
 }
 

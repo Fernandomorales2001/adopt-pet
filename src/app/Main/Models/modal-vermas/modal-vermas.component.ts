@@ -26,6 +26,13 @@ export class ModalVermasComponent implements OnInit {
     Description:    '',
     Age:             0,
     Organization: {
+      Address: {
+        Avenue: '',
+        City: '',
+        Street: '',
+        Lat: '',
+        Lon: ''
+      },
       Name:      ''
     },
     Images: [{}]

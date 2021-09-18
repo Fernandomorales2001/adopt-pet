@@ -16,11 +16,10 @@ import { NavigationComponent } from './Main/components/navigation/navigation.com
 import { AboutUsComponent } from './Main/components/about-us/about-us.component';
 import { LoginComponent } from './Main/components/login/login.component';
 import { DashboardComponent } from './Main/components/dashboard/dashboard.component';
-
-import { TasksComponent } from './main/components/tasks/tasks.component';
-import { PrivateTasksComponent } from './main/components/private-tasks/private-tasks.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { ModalVermasComponent } from './Main/Models/modal-vermas/modal-vermas.component';
+import { MascotasCrudComponent } from './Main/components/mascotas/mascotas-crud/mascotas-crud.component';
+
 
 
 
@@ -34,10 +33,9 @@ import { ModalVermasComponent } from './Main/Models/modal-vermas/modal-vermas.co
     AboutUsComponent,
     LoginComponent,
     DashboardComponent,
-    TasksComponent,
-    PrivateTasksComponent,
     ImagenPipe,
-    ModalVermasComponent
+    ModalVermasComponent,
+    MascotasCrudComponent
     ],
   imports: [
     BrowserModule,

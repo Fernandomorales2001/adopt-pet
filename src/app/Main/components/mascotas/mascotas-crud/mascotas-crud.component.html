@@ -1,0 +1,55 @@
+<div class="col-md-4 offset-md-3">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="nombre" [(ngModel)]="mascota.PetName" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="edad" [(ngModel)]="mascota.Age" placeholder="Edad" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="descripcion" [(ngModel)]="mascota.Description" placeholder="Descripcion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="nombreOr" [(ngModel)]="mascota.Organization.Name" placeholder="Nombre de la Organizacion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="avenida" [(ngModel)]="mascota.Organization.Address.Avenue" placeholder="Avenida" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="ciudad" [(ngModel)]="mascota.Organization.Address.City" placeholder="Ciudad" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="calle" [(ngModel)]="mascota.Organization.Address.Street" placeholder="Calle" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lat" [(ngModel)]="mascota.Organization.Address.Lat" placeholder="Latitud" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lon" [(ngModel)]="mascota.Organization.Address.Lon" placeholder="Longitud" class="form-control">
+                </div>
+                <button 
+                class="btn btn-success btn-block" 
+                (click)="saveNewPet()">
+                    Guardar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+    
+      <h5>{{mascota._id}} {{mascota.PetName == '' ? 'Nombre' : mascota.PetName}}</h5>
+      <p>{{mascota.Age == 0 ? 'Edad' : mascota.Age}}</p>
+      <p>{{mascota.Description == '' ? 'Descripcion' : mascota.Description}}</p>
+      <p>{{mascota.Organization.Address.Avenue == '' ? 'Avenida' : mascota.Organization.Address.Avenue}}</p>
+      <p>{{mascota.Organization.Address.City == '' ? 'Ciudad' : mascota.Organization.Address.City}}</p>
+      <p>{{mascota.Organization.Address.Street == '' ? 'Calle' : mascota.Organization.Address.Street}}</p>
+      <p>{{mascota.Organization.Address.Lat  == '' ? 'Latitud' : mascota.Organization.Address.Lat}}</p>
+      <p>{{mascota.Organization.Address.Lon == '' ? 'Longitud' : mascota.Organization.Address.Lon}}</p>
+    </div>
+  </div>
+
