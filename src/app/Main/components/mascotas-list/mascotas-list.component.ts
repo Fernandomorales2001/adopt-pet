@@ -1,9 +1,10 @@
 import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { Mascotas } from '../../interfaces/interface';
 import { ModalMantenimientoUsuariosAppComponent } from '../../Modals/modal-mantenimiento-usuarios-app/modal-mantenimiento-usuarios-app.component';
-import { MascotasServiceService } from '../../services/mascotas-service.service';
+
 import { ModalVermasComponent } from '../../Models/modal-vermas/modal-vermas.component';
 import { AuthService } from '../../services/auth.service';
+import { MascotasServiceService } from '../../services/mascotas-service.service';
 
 @Component({
   selector: 'app-mascotas-list',

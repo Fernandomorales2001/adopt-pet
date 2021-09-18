@@ -13,6 +13,7 @@ export class MascotasServiceService {
 
   private baseUrl: string = environment.baseUrl;
   Base_URL = 'https://app-keneth.herokuapp.com/getAllpets';
+  Base_URL_Form = 'https://app-keneth.herokuapp.com/adopcion/getAllFormularios';
   constructor ( private https: HttpClient) {}
 
   async getMascotas() {

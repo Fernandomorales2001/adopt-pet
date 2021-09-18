@@ -13,35 +13,38 @@
                         <thead>
                             <!-- style="color: white; -->
                             <tr class="text-white" style="background-color: #35261C;">
-                                <th style="width: 15%" class="text-center">
-                                    USUARIOS
+                                <th class="text-center">
+                                    NOMBRE DE SOLICITANTE
                                 </th>
-                                <th style="width: 15%" class="text-center">
-                                    CELULAR
+                                <th class="text-center">
+                                    TELEFONO
                                 </th>
-                                <th style="width: 15%" class="text-center">
-                                    NOMBRE
+                                <th class="text-center">
+                                    CORREO
                                 </th>
-                                <th style="width: 15%" class="text-center">
-                                    FECHA DE CREACION
+                                <th  class="text-center">
+                                    NOMBRE DE MASCOTA
                                 </th>
-                                <th style="width: 10%;"  class="text-center">
-                                    SUPERVISOR
+                                <th class="text-center">
+                                    EDAD
                                 </th>
-                                <th style="width: 10%" class="text-center">
-                                    ACTIVO
+                                <th class="text-center">
+                                    RAZA
                                 </th>
-                                <th style="width: 10%;"></th>
+                                <th class="text-center">
+                                    MOTIVO DE ADOPCION
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="text-align: center;">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><i tooltip="ACTIVO" ng-reflect-tooltip="ACTIVO" aria-hidden="true"></i></td>
-                                <td><i></i></td>
+                            <tr style="text-align: center;" *ngFor="let form of listaFormularios">
+                                <td>{{form.nombreSolicitante | uppercase}}</td>
+                                <td>{{form.telefono}}</td>
+                                <td>{{form.correo | uppercase}}</td>
+                                <td>{{form.nombreMascota | uppercase}}</td>
+                                <td>{{form.edad}}</td>
+                                <td>{{form.raza | uppercase}}</td>
+                                <td>{{form.motivoAdopcion | uppercase}}</td>
                             </tr>
                         </tbody>
                     </table>
